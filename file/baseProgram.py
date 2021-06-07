@@ -39,6 +39,8 @@ while choice != 9:
         #c_list = [file for file in file_list if file.endswith(".c")]
         #java_list = [file for file in file_list if file.endswith(".java")]
 
+        file_name = str(input('Specify file name to detect : '))
+
         for i in range(len(py_list)) :
             try :
                 subprocess.check_output( ['python', path + py_list[0]], universal_newlines=True )
