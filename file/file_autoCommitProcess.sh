@@ -1,2 +1,2 @@
 #!/bin/bash
-sh fileNameCommit.sh &
+sh file_autoCommit.sh &
