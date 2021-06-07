@@ -8,7 +8,7 @@ while choice != 6:
     print("Menu")
     print("1. New")
     print("2. Continue")
-    print("3. Select mode")
+    print("3. Specify filename")
     print("4. Git add file")
     print("5. Git push to branch")
     print("6. Delete auto-commit branch")
