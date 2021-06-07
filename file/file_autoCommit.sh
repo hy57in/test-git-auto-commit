@@ -17,7 +17,7 @@ do
     git --no-pager commit -a -m "Auto Commit: tracking only $specify_filename"
     git --no-pager push -u origin auto-commit
 
-  else
+  # else
     #echo "Working tree clean. Nothing to commmit."
   fi
 
