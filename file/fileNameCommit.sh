@@ -12,7 +12,7 @@ do
 
     #git --no-pager checkout -b specify_file
 
-    git --no-pager checkout -b auto-commit
+    git --no-pager checkout -b $file_name
     git --no-pager add $file_name
     git --no-pager commit -a -m "Auto Commit: tracking only $file_name"
     git --no-pager push -u origin auto-commit
