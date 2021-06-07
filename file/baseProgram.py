@@ -43,7 +43,12 @@ while choice != 6:
                 subprocess.call(['sh', './continue.sh'])
                 subprocess.call(['sh', './autoCommitProcess.sh'])
         
+    elif choice == 4:
+        pass
     
+    elif choice == 5:
+        pass
+
     elif choice == 6:
         subprocess.call(['bash', './killProcess.sh'])
 
@@ -63,14 +68,14 @@ while choice != 6:
         subprocess.call(['sh', './continue.sh'])
         subprocess.call(['sh', './autoCommitProcess.sh'])
 
-    elif choice == 6:
+    elif choice == 8:
         subprocess.call(['bash', './killProcess.sh'])
 
         branch = str(input("Where to checkout?(branch_name) "))
 
         subprocess.call(['bash', './deleteBranch.sh', branch])
 
-    elif choice == 7:
+    elif choice == 9:
         subprocess.call(['bash', './killProcess.sh'])
         break
 
