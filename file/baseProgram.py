@@ -64,7 +64,7 @@ while choice != 6:
         subprocess.call(['sh', './addFile.sh', specify_filename])
 
         subprocess.call(['sh', './continue.sh'])
-        subprocess.call(['sh', './autoCommitProcess.sh'])
+        subprocess.call(['sh', './file_autoCommitProcess.sh',  specify_filename])
 
 
         #path = "./code/"
