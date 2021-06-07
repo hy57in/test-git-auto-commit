@@ -10,9 +10,7 @@ do
     git config --global credential.helper store
     git config --global credential.helpter cache
 
-    git --no-pager
-
-    git checkout -b $file_name
+    git --no-pager checkout -b $file_name
 
     #git --no-pager checkout auto-commit
     git --no-pager add $file_name
