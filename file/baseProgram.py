@@ -10,7 +10,7 @@ def specify_filename():
 
 choice = 0
 
-while choice != 6:
+while choice != 9:
     print("Menu")
     print("1. New")
     print("2. Continue")
