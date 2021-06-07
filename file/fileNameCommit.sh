@@ -1,7 +1,7 @@
 #!/bin/bash
 while :
 do
-  echo "Specify file name"
+  #echo "Specify file name"
 
   file_name="$1"
 
