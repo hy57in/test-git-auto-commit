@@ -9,12 +9,12 @@ while choice != 6:
     print("1. New")
     print("2. Continue")
     print("3. Specify file name mode")
-    print("3. Specify file section mode")
-    print("3. Specify pe mode")
-    print("4. Git add file")
-    print("5. Git push to branch")
-    print("6. Delete auto-commit branch")
-    print("7. Exit")
+    print("4. Specify file section mode")
+    print("5. Specify percent of all files mode")
+    print("6. Git add file")
+    print("7. Git push to branch")
+    print("8. Delete auto-commit branch")
+    print("9. Exit")
     choice = int(input(">> "))
 
     if choice == 1:
