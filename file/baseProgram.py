@@ -32,6 +32,9 @@ while choice != 9:
         subprocess.call(['sh', './autoCommitProcess.sh'])
 
     elif choice == 3:
+        
+        
+    elif choice == 4:
         path = "./code/"
         file_list = os.listdir(path)
 
@@ -51,9 +54,6 @@ while choice != 9:
 
                 subprocess.call(['sh', './continue.sh'])
                 subprocess.call(['sh', './autoCommitProcess.sh'])
-        
-    elif choice == 4:
-        pass
 
     elif choice == 5:
         pass
