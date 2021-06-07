@@ -57,31 +57,10 @@ while choice != 6:
         subprocess.call(['bash', './killProcess.sh'])
 
         specify_filename = str(input("Specify file_name to detect : "))
-        subprocess.call(['sh', './addFile.sh', specify_filename])
+        #subprocess.call(['sh', './addFile.sh', specify_filename])
 
         subprocess.call(['sh', './continue.sh'])
         subprocess.call(['sh', './file_autoCommitProcess.sh', specify_filename])
-
-
-        #path = "./code/"
-        #file_list = os.listdir(path)
-
-        #py_list = [file for file in file_list if file.endswith(".py")]
-        #c_list = [file for file in file_list if file.endswith(".c")]
-        #java_list = [file for file in file_list if file.endswith(".java")]
-
-        #file_name = str(input('Specify file name to detect : '))
-
-        # for i in range(len(py_list)) :
-        #     try :
-        #         subprocess.check_output( ['python', path + py_list[0]], universal_newlines=True )
-        #         #subprocess.call(['sh', './fileNameProcess.sh', file_name])
-        #     except Exception as ex:
-        #         branch = str("error")
-        #         msg = str(ex)
-
-        #         subprocess.call(['sh', './continue.sh'])
-        #         subprocess.call(['sh', './autoCommitProcess.sh'])
 
     elif choice == 4:
         subprocess.call(['bash', './killProcess.sh'])
