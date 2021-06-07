@@ -60,8 +60,8 @@ while choice != 6:
     elif choice == 3:
         subprocess.call(['bash', './killProcess.sh'])
 
-        specify_filename = str(input("What file to add?(file_name) "))
-        subprocess.call(['sh', './addFile.sh', filename])
+        specify_filename = str(input("Specify file_name to detect : "))
+        subprocess.call(['sh', './addFile.sh', specify_filename])
 
         subprocess.call(['sh', './continue.sh'])
         subprocess.call(['sh', './autoCommitProcess.sh'])
