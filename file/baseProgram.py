@@ -2,6 +2,12 @@ import subprocess
 import time
 import os
 
+# 특정 파일 지정
+def specify_filename():
+    file_name = str(input('Specify file name to detect : '))
+    subprocess.call(['sh', './file_commit.sh', file_name])
+
+
 choice = 0
 
 while choice != 6:
@@ -45,7 +51,7 @@ while choice != 6:
         
     elif choice == 4:
         pass
-    
+
     elif choice == 5:
         pass
 
