@@ -2,35 +2,35 @@ import subprocess
 import time
 import os
 
-def auto_commit():
-    subprocess.call(['sh', './continue.sh'])
-    subprocess.call(['sh', './autoCommitProcess.sh'])
-    print("백업되었습니다.")
+# def auto_commit():
+#     subprocess.call(['sh', './continue.sh'])
+#     subprocess.call(['sh', './autoCommitProcess.sh'])
+#     print("백업되었습니다.")
 
-# 특정 파일 지정
-def specify_filename():
-    file_name = str(input('Specify file name to detect : '))
-    subprocess.call(['sh', './file_commit.sh', file_name])
+# # 특정 파일 지정
+# def specify_filename():
+#     file_name = str(input('Specify file name to detect : '))
+#     subprocess.call(['sh', './file_commit.sh', file_name])
 
-# 특정 파일의 특정 구간 지정
-def specify_filesection():
-    specify_filename()
+# # 특정 파일의 특정 구간 지정
+# def specify_filesection():
+#     specify_filename()
     
-    file_section = str(input('Do you want to specify section? [y/n] '))
+#     file_section = str(input('Do you want to specify section? [y/n] '))
 
-    if file_section == "y" or file_section == "Y":
-        file_section_start = str(input('Specify start section number in file to detect : '))
-        file_section_finish = str(input('Specify finish section number in file to detect : '))
-        subprocess.call(['sh', './file_section_commit.sh', file_section_start, file_section_finish])
-    else:
-        subprocess.call(['sh', './file_commit.sh', file_name])
+#     if file_section == "y" or file_section == "Y":
+#         file_section_start = str(input('Specify start section number in file to detect : '))
+#         file_section_finish = str(input('Specify finish section number in file to detect : '))
+#         subprocess.call(['sh', './file_section_commit.sh', file_section_start, file_section_finish])
+#     else:
+#         subprocess.call(['sh', './file_commit.sh', file_name])
 
-def specify_percent():
-    specify_filename() # 특정 파일 지정
+# def specify_percent():
+#     specify_filename() # 특정 파일 지정
     
-    percent = str(input('What percenttage change do you want to commit?'))
+#     percent = str(input('What percenttage change do you want to commit?'))
 
-    subprocess.call(['sh', './file_npercent_change.sh', percent])
+#     subprocess.call(['sh', './file_npercent_change.sh', percent])
 
 choice = 0
 
@@ -58,7 +58,6 @@ while choice != 6:
 
         specify_filename = str(input("Specify file_name to detect : "))
         #subprocess.call(['sh', './addFile.sh', specify_filename])
-
         #subprocess.call(['sh', './continue.sh'])
         subprocess.call(['sh', './file_autoCommitProcess.sh', specify_filename])
 
