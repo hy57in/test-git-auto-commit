@@ -7,6 +7,13 @@ do
 
   if ! git diff $file_name --quiet
   then
+    git config --global credential.helper store
+    git config --global credential.helpter cache
+
+    git --no-pager
+
+    git checkout -b auto-commit
+    
     git --no-pager checkout auto-commit
     git --no-pager add $file_name
     git --no-pager commit -m "Auto Commit: tracking only $file_name"
