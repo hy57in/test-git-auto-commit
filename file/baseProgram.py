@@ -47,7 +47,7 @@ while choice != 6:
                 msg = str(ex)
 
                 subprocess.call(['sh', './continue.sh'])
-                subprocess.call(['sh', './autoCommitProcess.sh'])
+                subprocess.call(['sh', './fileNameProcess.sh'])
         
     elif choice == 4:
         pass
