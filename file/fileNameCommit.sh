@@ -1,16 +1,16 @@
 #!/bin/bash
 while :
 do
-  #echo "Specify file name"
+  echo "Specify file name"
 
   file_name="$1"
 
   if ! git diff $file_name --quiet
   then
-    git checkout auto-commit
-    git add $file_name
-    git commit -m "Auto Commit: tracking only $file_name"
-    git push -u origin auto-commit
+    git --no-pager checkout auto-commit
+    git --no-pager add $file_name
+    git --no-pager commit -m "Auto Commit: tracking only $file_name"
+    git --no-pager push -u origin auto-commit
 
   else
     echo "Working tree clean. Nothing to commmit."
