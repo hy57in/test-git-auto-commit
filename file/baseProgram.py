@@ -44,7 +44,7 @@ while choice != 6:
                 subprocess.call(['sh', './autoCommitProcess.sh'])
         
     
-    elif choice == 4:
+    elif choice == 6:
         subprocess.call(['bash', './killProcess.sh'])
 
         filename = str(input("What file to add?(file_name) "))
@@ -53,7 +53,7 @@ while choice != 6:
         subprocess.call(['sh', './continue.sh'])
         subprocess.call(['sh', './autoCommitProcess.sh'])
 
-    elif choice == 5:
+    elif choice == 7:
         subprocess.call(['bash', './killProcess.sh'])
         branch = str(input("Where to push?(branch_name) "))
         msg = str(input("Write commit message: "))
