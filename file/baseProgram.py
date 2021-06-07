@@ -6,7 +6,7 @@ def auto_commit():
     subprocess.call(['sh', './continue.sh'])
     subprocess.call(['sh', './autoCommitProcess.sh'])
     print("백업되었습니다.")
-    
+
 # 특정 파일 지정
 def specify_filename():
     file_name = str(input('Specify file name to detect : '))
@@ -38,7 +38,7 @@ while choice != 9:
 
     elif choice == 3:
         file_name = str(input('Specify file name to detect : '))
-        subprocess.call(['sh', './fileNameProcess.sh', file_name])
+        #subprocess.call(['sh', './fileNameProcess.sh', file_name])
         
     elif choice == 4:
         path = "./code/"
