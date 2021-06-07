@@ -18,7 +18,7 @@ do
     git --no-pager push -u origin auto-commit
 
   else
-    echo "Working tree clean. Nothing to commmit."
+    #echo "Working tree clean. Nothing to commmit."
   fi
 
   sleep 60
