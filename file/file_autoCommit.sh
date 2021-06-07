@@ -1,9 +1,9 @@
 #!/bin/bash
 while :
 do
-  #echo "Specify file name"
 
   specify_filename="$1"
+  echo "Specify file name"
 
   git config --global credential.helper store
   git config --global credential.helpter cache
