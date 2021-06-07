@@ -16,8 +16,8 @@ while choice != 6:
     choice = int(input(">> "))
 
     if choice == 1:
-        subprocess.call(['sh', '/setting.sh'])
-        subprocess.call(['sh', '/autoCommitProcess.sh'])
+        subprocess.call(['sh', './setting.sh'])
+        subprocess.call(['sh', './autoCommitProcess.sh'])
     
     elif choice == 2:
         subprocess.call(['sh', './continue.sh'])
