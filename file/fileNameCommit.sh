@@ -7,8 +7,8 @@ do
 
   if ! git diff $file_name --quiet
   then
-    git config --global credential.helper store
-    git config --global credential.helpter cache
+    #git config --global credential.helper store
+    #git config --global credential.helpter cache
 
     git --no-pager checkout -b $file_name
 
