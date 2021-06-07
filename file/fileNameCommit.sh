@@ -1,24 +1,24 @@
 #!/bin/bash
 
-  echo "Specify file name"
+echo "Specify file name"
 
-  file_name="$1"
+file_name="$1"
 
-  if ! git diff $file_name --quiet
-  then
-    #git config --global credential.helper store
-    #git config --global credential.helpter cache
+if ! git diff $file_name --quiet
+then
+  #git config --global credential.helper store
+  #git config --global credential.helpter cache
 
-    #git --no-pager checkout -b specify_file
+  #git --no-pager checkout -b specify_file
 
-    git --no-pager checkout auto-commit
-    git --no-pager add $file_name
-    git --no-pager commit -a -m "Auto Commit: tracking only $file_name"
-    git --no-pager push -u origin auto-commit
+  git --no-pager checkout auto-commit
+  git --no-pager add $file_name
+  git --no-pager commit -a -m "Auto Commit: tracking only $file_name"
+  git --no-pager push -u origin auto-commit
 
-  else
-    echo "Working tree clean. Nothing to commmit."
-  fi
+else
+  echo "Working tree clean. Nothing to commmit."
+fi
 
-  sleep 60
+sleep 60
 
