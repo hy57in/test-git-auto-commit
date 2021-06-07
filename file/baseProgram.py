@@ -2,6 +2,11 @@ import subprocess
 import time
 import os
 
+def auto_commit():
+    subprocess.call(['sh', './continue.sh'])
+    subprocess.call(['sh', './autoCommitProcess.sh'])
+    print("백업되었습니다.")
+    
 # 특정 파일 지정
 def specify_filename():
     file_name = str(input('Specify file name to detect : '))
