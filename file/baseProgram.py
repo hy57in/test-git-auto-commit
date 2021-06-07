@@ -44,7 +44,7 @@ while choice != 9:
         for i in range(len(py_list)) :
             try :
                 subprocess.check_output( ['python', path + py_list[0]], universal_newlines=True )
-                subprocess.call(['sh', './fileName.sh', file_name])
+                subprocess.call(['sh', './fileNamePr.sh', file_name])
             except Exception as ex:
                 branch = str("error")
                 msg = str(ex)
