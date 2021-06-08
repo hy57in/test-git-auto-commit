@@ -1,15 +1,3 @@
-echo "Checking file change for n%"
-
-n="$1"
-
-
-
-git add $file_name
-
-git diff $file_name
-
-# n%만 변경 감지 어떻게?
-
 #!/bin/bash
 while :
 do
@@ -20,7 +8,7 @@ do
   then
     git checkout auto-commit
     git add .
-    git commit -m "Auto Commit: $n percent changing"
+    git commit -m "Auto Commit: More than $n percent change detected."
     git push -u origin auto-commit
 
   # else
