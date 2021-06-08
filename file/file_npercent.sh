@@ -3,7 +3,7 @@ while :
 do
   echo "Checking file change for n%"
   n="$1"
-  
+  c
 
   if ! git diff --quiet && $change > $n
   then
