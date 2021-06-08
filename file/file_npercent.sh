@@ -5,12 +5,11 @@ do
   filename="$1"
   n="$2"
   diff_msg=`git diff --stat $filename`
-  change_line=$(diff_msg | cut -f  3 -d' ')
-  echo "$diff_msg"
-  filename=`./b.py`
+
+  change_line=$(echo $diff_msg | cut -f  3 -d' ')
 
   FILE_ROW_COUNT=$(cat $filename| wc -l)
-  change=()
+  change=(change_line / FILE_ROW_COUNT) * 100
   echo "$FILE_ROW_COUNT"
 
   FILE_ROW_COUNT=$(cat `./b.py`| wc -l)
