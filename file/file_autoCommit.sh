@@ -1,9 +1,8 @@
 #!/bin/bash
 while :
 do
-
-  specify_filename="$1"
   echo "Specify file name"
+  specify_filename="$1"
 
   if ! git diff --quiet $specify_filename 
   then
