@@ -5,7 +5,7 @@ do
   filename="$1"
   n="$2"
   diff_msg=`git diff --stat $filename`
-  change_line=diff_msg | cut -f  3 -d' '
+  change_line=$(diff_msg | cut -f  3 -d' ')
   echo "$diff_msg"
   filename=`./b.py`
 
