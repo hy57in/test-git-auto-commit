@@ -5,9 +5,6 @@ do
   specify_filename_="$1"
   echo "Specify file name"
 
-  git config --global credential.helper store
-  git config --global credential.helpter cache
-
   if ! git diff $specify_filename_ --quiet
   then
     #git --no-pager checkout $specify_filename
