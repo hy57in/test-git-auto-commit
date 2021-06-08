@@ -58,6 +58,7 @@ while choice != 6:
 
         specify_filename = str(input("Specify file_name to detect : "))
 
+        subprocess.call(['sh', './file_addFile.sh', specify_filename])
         subprocess.call(['sh', './file_autoCommit.sh', specify_filename])
 
     elif choice == 4:
