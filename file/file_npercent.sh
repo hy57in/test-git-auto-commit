@@ -6,6 +6,11 @@ do
   n="$2"
   str=`git diff`
   echo "str"
+  filename=`./b.py`
+
+  FILE_ROW_COUNT=$(cat $filename| wc -l)
+  change=()
+  echo "$FILE_ROW_COUNT"
 
   FILE_ROW_COUNT=$(cat `./b.py`| wc -l)
 
