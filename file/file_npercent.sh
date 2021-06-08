@@ -7,16 +7,13 @@ do
   _100="100"
   diff_msg=`git diff --stat $filename`
 
-  change_line=$(echo $diff_msg | cut -f  3 -d' ')
-
-  FILE_ROW_COUNT=$(cat $filename| wc -l)
-  change=`expr $change_line / $FILE_ROW_COUNT`
-  change_percent=`expr $change \* $_100$`
+  change_line=$(echo $diff_msg | cut -f  3 -d' ') # 변경된 줄 수 
+  FILE_ROW_COUNT=$(cat $filename| wc -l) # 전체 줄 수 
+  change=`expr $change_line / $FILE_ROW_COUNT` # 변경된 줄 수 / 전체 줄 수 
+  change_percent=`expr $change \* $_100` # percent = 변경된 줄 수 / 전체 줄 수 * 100
   echo "$FILE_ROW_COUNT"
 
-  FILE_ROW_COUNT=$(cat `./b.py`| wc -l)
-
-  if ! git diff --quiet && $change > $n
+  if ! git diff --quiet && $change_percent > $n
   then
     git checkout auto-commit
     git add .
