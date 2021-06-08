@@ -11,7 +11,7 @@ do
 
   FILE_ROW_COUNT=$(cat $filename| wc -l)
   change=`expr $change_line / $FILE_ROW_COUNT`
-  change_percent=`expr $change \* $`
+  change_percent=`expr $change \* $_100$`
   echo "$FILE_ROW_COUNT"
 
   FILE_ROW_COUNT=$(cat `./b.py`| wc -l)
