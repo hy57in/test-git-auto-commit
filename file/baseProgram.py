@@ -68,11 +68,12 @@ while choice != 6:
         subprocess.call(['bash', './killProcess.sh'])
 
         n = int(input("Input percent : "))
+        filename = str(input("Add filename : "))
         subprocess.call(['sh', './continue.sh'])
-        
+
         subprocess.call(['sh', './addFile.sh', filename])
 
-        subprocess.call(['sh', './autoCommitProcess.sh'])
+        subprocess.call(['sh', './file_npercent.sh', filename, n])
 
     # elif choice == 4:
     #     subprocess.call(['bash', './killProcess.sh'])

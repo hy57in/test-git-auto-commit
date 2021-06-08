@@ -2,6 +2,7 @@
 while :
 do
   echo "Checking file change for n%"
+  
   filename="$1"
   n="$2"
   _100="100"
