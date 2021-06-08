@@ -4,7 +4,7 @@ do
   n="$1"
   echo "Checking file change for n%"
 
-  if ! git diff --quiet
+  if ! git diff --quiet && $n
   then
     git checkout auto-commit
     git add .
