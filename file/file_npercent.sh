@@ -1,10 +1,11 @@
 #!/bin/bash
 while :
 do
-  n="$1"
   echo "Checking file change for n%"
+  n="$1"
+  
 
-  if ! git diff --quiet && $n
+  if ! git diff --quiet && $change > $n
   then
     git checkout auto-commit
     git add .
