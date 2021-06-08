@@ -4,7 +4,7 @@ do
   echo "Checking file change for n%"
   filename="$1"
   n="$2"
-  diff_msg=`git diff --stat $filenam`
+  diff_msg=`git diff --stat $filename`
   echo "diff_msg"
   filename=`./b.py`
 
