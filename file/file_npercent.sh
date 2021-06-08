@@ -6,6 +6,8 @@ do
   str=`git diff`
   echo "str"
 
+  FILE_ROW_COUNT=$(cat `./b.py`| wc -l)
+
   if ! git diff --quiet && $change > $n
   then
     git checkout auto-commit
