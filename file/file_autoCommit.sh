@@ -9,7 +9,7 @@ do
   then
     git checkout $specify_filename
     git add $specify_filename_
-    git commit -a -m "Auto Commit: tracking only $specify_filename_"
+    git commit -m "Auto Commit: tracking only $specify_filename_"
     git push -u origin auto-commit
 
   # else
