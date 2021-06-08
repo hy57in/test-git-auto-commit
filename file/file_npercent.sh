@@ -4,7 +4,7 @@ do
   echo "Checking file change for n%"
   filename="$1"
   n="$2"
-  ONE_HUNDRED=
+  _100="100"
   diff_msg=`git diff --stat $filename`
 
   change_line=$(echo $diff_msg | cut -f  3 -d' ')
