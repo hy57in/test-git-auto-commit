@@ -2,7 +2,7 @@
 while :
 do
   echo "Checking file change for n%"
-  
+
   filename="$1"
   n="$2"
   _100="100"
@@ -17,7 +17,7 @@ do
   if ! git diff --quiet && $change_percent > $n
   then
     git checkout auto-commit
-    git add .
+    git add $filename
     git commit -m "Auto Commit: More than $n percent change detected."
     git push -u origin auto-commit
 
