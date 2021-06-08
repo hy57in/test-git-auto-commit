@@ -2,7 +2,8 @@
 while :
 do
   echo "Checking file change for n%"
-  n="$1"
+  filename="$1"
+  n="$2"
   str=`git diff`
   echo "str"
 
