@@ -7,8 +7,6 @@ do
 
   git config --global credential.helper store
   git config --global credential.helpter cache
-  
-  git --no-pager checkout -b $specify_filename
 
   if ! git diff $specify_filename --quiet
   then
