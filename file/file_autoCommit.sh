@@ -2,14 +2,14 @@
 while :
 do
 
-  specify_filename_="$1"
+  specify_filename="$1"
   echo "Specify file name"
 
-  if ! git diff $specify_filename_ --quiet
+  if ! git diff $specify_filename --quiet
   then
-    git checkout $specify_filename
-    git add $specify_filename_
-    git commit -m "Auto Commit: tracking only $specify_filename_"
+    git checkout auto-commit
+    git add $specify_filename
+    git commit -m "Auto Commit: tracking $specify_filename"
     git push -u origin auto-commit
 
   # else
