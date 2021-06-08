@@ -5,7 +5,7 @@ do
   specify_filename="$1"
   echo "Specify file name"
 
-  if ! git diff $specify_filename --quiet
+  if ! git diff --quiet $specify_filename 
   then
     git checkout auto-commit
     git add $specify_filename
