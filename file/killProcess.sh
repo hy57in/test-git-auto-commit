@@ -3,4 +3,4 @@ result=$(ps ax | grep autoCommit.sh)
 
 #echo $result
 
-pkill -f "sh autoCommit.sh"
+pkill -f "sh file_autoCommit.sh"
