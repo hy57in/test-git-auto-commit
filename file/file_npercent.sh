@@ -16,11 +16,11 @@ do
   n="$1"
   echo "Checking file change for n%"
 
-  if ! git diff --quiet $specify_filename 
+  if ! git diff --quiet
   then
     git checkout auto-commit
-    git add $specify_filename
-    git commit -m "Auto Commit: tracking $specify_filename"
+    git add .
+    git commit -m "Auto Commit: $n percent changing"
     git push -u origin auto-commit
 
   # else
