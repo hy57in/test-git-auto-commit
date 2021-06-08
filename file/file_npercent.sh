@@ -13,8 +13,7 @@ git diff $file_name
 #!/bin/bash
 while :
 do
-  # echo "Specify file name"
-  specify_filename="$1"
+  n="$1"
   echo "Checking file change for n%"
 
   if ! git diff --quiet $specify_filename 
