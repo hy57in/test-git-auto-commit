@@ -9,7 +9,8 @@ do
   change_line=$(echo $diff_msg | cut -f  3 -d' ')
 
   FILE_ROW_COUNT=$(cat $filename| wc -l)
-  change=(expr $change_line / $FILE_ROW_COUNT) \* 100
+  change=`expr $change_line / $FILE_ROW_COUNT`
+  change_percent
   echo "$FILE_ROW_COUNT"
 
   FILE_ROW_COUNT=$(cat `./b.py`| wc -l)
