@@ -10,7 +10,7 @@ do
 
   if ! git diff $specify_filename --quiet
   then
-    git --no-pager checkout $specify_filename
+    #git --no-pager checkout $specify_filename
     git --no-pager add $specify_filename
     git --no-pager commit -a -m "Auto Commit: tracking only $specify_filename"
     git --no-pager push -u origin auto-commit
