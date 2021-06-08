@@ -61,7 +61,7 @@ while choice != 6:
 
         subprocess.call(['sh', './file_addFile.sh', specify_filename])
         subprocess.call(['sh', './continue.sh'])
-        subprocess.call(['sh', './file_autoCommit.sh', specify_filename])
+        subprocess.call(['sh', './filename.sh', specify_filename])
 
     elif choice == 4:
         subprocess.call(['bash', './killProcess.sh'])
