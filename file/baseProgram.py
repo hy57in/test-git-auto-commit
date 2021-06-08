@@ -39,6 +39,7 @@ while choice != 6:
     print("1. New")
     print("2. Continue")
     print("3. Select mode")
+    print("4. N percent")
     print("4. Git add file")
     print("5. Git push to branch")
     print("6. Delete auto-commit branch")
@@ -63,6 +64,14 @@ while choice != 6:
         subprocess.call(['sh', './continue.sh'])
         subprocess.call(['sh', './filename.sh', specify_filename])
 
+    elif choice == 4:
+        subprocess.call(['bash', './killProcess.sh'])
+
+        filename = str(input("What file to add?(file_name) "))
+        subprocess.call(['sh', './addFile.sh', filename])
+
+        subprocess.call(['sh', './continue.sh'])
+        subprocess.call(['sh', './autoCommitProcess.sh'])
     elif choice == 4:
         subprocess.call(['bash', './killProcess.sh'])
 
