@@ -10,7 +10,7 @@ do
     git checkout $specify_filename
     git add $specify_filename_
     git commit -a -m "Auto Commit: tracking only $specify_filename_"
-    git --no-pager push -u origin auto-commit
+    git push -u origin auto-commit
 
   # else
     #echo "Working tree clean. Nothing to commmit."
