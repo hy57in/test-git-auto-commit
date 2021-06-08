@@ -5,7 +5,7 @@ do
   filename="$1"
   n="$2"
   diff_msg=`git diff --stat $filename`
-  echo "diff_msg"
+  echo "$diff_msg"
   filename=`./b.py`
 
   FILE_ROW_COUNT=$(cat $filename| wc -l)
