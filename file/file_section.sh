@@ -14,7 +14,7 @@ do
   then
     git checkout auto-commit
     git add $filename
-    git commit -m "Auto Commit: $n ~ $m change detected."
+    git commit -m "Auto Commit: section $n ~ $m change detected."
     git push -u origin auto-commit
 
   # else
