@@ -1,13 +1,26 @@
-echo "Specify filesection"
+#!/bin/bash
+while :
+do
+  echo "Specify file section"
 
-file_name="$1"
+  filename="$1"
+  n="$2" # 시작 줄
+  m="$3" # 마지막 줄
+  diff_msg=`git diff --stat $filename`
 
-file_section_start="$2"
+  change_line=$(echo $diff_msg | cut -f  3 -d' ') # 현재 변경된 줄 수 
+  FILE_ROW_COUNT=$(cat $filename| wc -l) # 전체 줄 수 
 
-file_section_finish="$3"
+  if ! git diff --quiet && ($change_line > $n || $change_line < $m)
+  then
+    git checkout auto-commit
+    git add $filename
+    git commit -m "Auto Commit: section $n ~ $m change detected."
+    git push -u origin auto-commit
 
-git add $file_name
+  # else
+    #echo "Working tree clean. Nothing to commmit."
+  fi
 
-#git add $FILE_SECTION_START to $FILE_SECTION_FINISH ??
-
-# 특정 구간 추적하는 것 어떻게 하지?
+  sleep 60
+done
