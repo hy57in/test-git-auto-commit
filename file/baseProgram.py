@@ -85,6 +85,8 @@ while choice != 6:
 
     elif choice == 5:
         subprocess.call(['bash', './killProcess.sh'])
+        subprocess.call(['sh', './setting.sh'])
+        
         branch = str(input("Where to push?(branch_name) "))
         msg = str(input("Write commit message: "))
         
