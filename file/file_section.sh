@@ -4,8 +4,8 @@ do
   echo "Specify file section"
 
   filename="$1"
-  n="$2"
-  m="$3"
+  n="$2" # 시작 줄
+  m="$3" # 마지막 줄
   diff_msg=`git diff --stat $filename`
 
   FILE_ROW_COUNT=$(cat $filename| wc -l) # 전체 줄 수 
