@@ -61,15 +61,15 @@ while choice != 6:
         specify_filename = str(input("Specify file_name to detect : "))
 
         subprocess.call(['sh', './file_addFile.sh', specify_filename])
-        subprocess.call(['sh', './continue.sh'])
         subprocess.call(['sh', './filename.sh', specify_filename])
 
     elif choice == 4:
         subprocess.call(['bash', './killProcess.sh'])
+        subprocess.call(['sh', './setting.sh'])
 
         n = int(input("Input percent : "))
         filename = str(input("Add filename : "))
-        
+
         subprocess.call(['sh', './continue.sh'])
         subprocess.call(['sh', './addFile.sh', filename])
         subprocess.call(['sh', './file_npercent.sh', filename, n])
