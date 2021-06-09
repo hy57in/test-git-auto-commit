@@ -8,9 +8,10 @@ do
   m="$3" # 마지막 줄
   diff_msg=`git diff --stat $filename`
 
+  change_line=$(echo $diff_msg | cut -f  3 -d' ') # 현재 변경된 줄 수 
   FILE_ROW_COUNT=$(cat $filename| wc -l) # 전체 줄 수 
 
-  if ! git diff --quiet && $change_percent > $n
+  if ! git diff --quiet && ($change_line > $n || $change_line < $m)
   then
     git checkout auto-commit
     git add $filename
