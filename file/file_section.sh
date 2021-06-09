@@ -5,7 +5,7 @@ do
 
   filename="$1"
   n="$2"
-  m=
+  m="$"
   diff_msg=`git diff --stat $filename`
 
   FILE_ROW_COUNT=$(cat $filename| wc -l) # 전체 줄 수 
