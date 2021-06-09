@@ -67,7 +67,7 @@ while choice != 6:
         subprocess.call(['bash', './killProcess.sh'])
         subprocess.call(['sh', './setting.sh'])
 
-        n = int(input("Input percent : "))
+        n = str(input("Input percent : "))
         filename = str(input("Add filename : "))
 
         subprocess.call(['sh', './continue.sh'])
