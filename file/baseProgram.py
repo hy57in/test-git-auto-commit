@@ -40,10 +40,10 @@ while choice != 6:
     print("2. Continue")
     print("3. Select mode")
     print("4. N percent")
-    print("4. Git add file")
-    print("5. Git push to branch")
-    print("6. Delete auto-commit branch")
-    print("7. Exit")
+    print("5. Git add file")
+    print("6. Git push to branch")
+    print("7. Delete auto-commit branch")
+    print("8. Exit")
     choice = int(input(">> "))
 
     if choice == 1:
