@@ -6,13 +6,11 @@ do
 
   echo "Checking file change for $n%"
 
-  _100="100"
   diff_msg=`git diff --stat $filename`
-
   FILE_ROW_COUNT=$(cat $filename| wc -l) # 전체 줄 수 
   change_line=$(echo $diff_msg | cut -f 3 -d' ') # 변경된 줄 수 
   change=`expr $change_line / $FILE_ROW_COUNT` # 변경된 줄 수 / 전체 줄 수 
-  change_percent=`expr $change \* $_100` # percent = 변경된 줄 수 / 전체 줄 수 * 100
+  change_percent=`expr $change \* 100` # percent = 변경된 줄 수 / 전체 줄 수 * 100
   echo "전체 줄 수 : $FILE_ROW_COUNT"
   echo "변경된 줄 수 : $change_line"
   echo "퍼센트 : $change_percent"
