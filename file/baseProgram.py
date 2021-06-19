@@ -67,21 +67,12 @@ while choice != 6:
         subprocess.call(['bash', './killProcess.sh'])
         subprocess.call(['sh', './setting.sh'])
 
-        n = str(input("Input percent : "))
         filename = str(input("Add filename : "))
+        n = input("Input percent : ")
 
         subprocess.call(['sh', './continue.sh'])
         subprocess.call(['sh', './addFile.sh', filename])
         subprocess.call(['sh', './file_npercent.sh', filename, n])
-
-    # elif choice == 4:
-    #     subprocess.call(['bash', './killProcess.sh'])
-
-    #     filename = str(input("What file to add?(file_name) "))
-    #     subprocess.call(['sh', './addFile.sh', filename])
-
-    #     subprocess.call(['sh', './continue.sh'])
-    #     subprocess.call(['sh', './autoCommitProcess.sh'])
 
     elif choice == 5:
         subprocess.call(['bash', './killProcess.sh'])
