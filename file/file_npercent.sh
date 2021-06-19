@@ -1,10 +1,11 @@
 #!/bin/bash
 while :
 do
-  echo "Checking file change for n%"
-
   filename="$1"
   n="$2"
+
+  echo "Checking file change for $n%"
+
   _100="100"
   diff_msg=`git diff --stat $filename`
 
