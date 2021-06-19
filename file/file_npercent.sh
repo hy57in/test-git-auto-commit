@@ -14,7 +14,7 @@ do
   change=`expr $change_line / $FILE_ROW_COUNT` # 변경된 줄 수 / 전체 줄 수 
   change_percent=`expr $change \* $_100` # percent = 변경된 줄 수 / 전체 줄 수 * 100
   echo "전체 줄 수 : $FILE_ROW_COUNT"
-  echo "전체 줄 수 : $FILE_ROW_COUNT"
+  echo "변경된 줄 수 : $FILE_ROW_COUNT"
   echo "전체 줄 수 : $FILE_ROW_COUNT"
 
   if ! git diff --quiet && $change_percent > $n
