@@ -16,10 +16,4 @@ sffs
 sdffdsfd
 dsfsfd
 sdfsd
-sffs
-sdffdd
-dsfs
-sdfd
-sdf
-sf
-s
+sff
