@@ -7,5 +7,3 @@ sdffdsfdfsfs
 dsfsfdfsdfsdf
 sdffdsfdfsfsdㅓㅓㅓㅏㅣ
 dsfsfdfsdfsdf
-sdfdshhsdsdsfdfds
-fd
