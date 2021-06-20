@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-fㅎㅎㅇㅇ
-=======
 fdsfdfsfsdㅓㅓㅓㅏㅣ
 dsfsfdfsdfsdfsf
 sdfdshhsdsdsfdfdsdfds
