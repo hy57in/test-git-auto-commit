@@ -17,8 +17,7 @@ do
   echo "변경된 퍼센트 : $change_percent"
 
   # if ! git diff --quiet
-  if [ $change_percent -gt $n ]
-  then
+  if [ $change_percent -gt $n ];then
     git checkout auto-commit
     git add $filename
     git commit -m "Auto Commit: More than $n percent change detected."
