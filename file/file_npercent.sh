@@ -7,7 +7,7 @@ do
   echo "Checking file change for $n%"
 
   diff_msg=`git diff --stat $filename`
-  total_char=$(cat $filename| wc -m) # 전체 문자 수 
+  total_char=$(cat $filename| wc -l) # 전체 문자 수 
   changes_char=$(echo $diff_msg | cut -f 3 -d' ') # 변경된 문자 수 
   changes=`expr $changes_char \* 100` # 변경된 문자 수 * 100
   change_percent=`expr $changes / $total_char` # percent = 변경된 문자 수 / 전체 문자 수 * 100
