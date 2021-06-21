@@ -1,9 +1,9 @@
 print("Hello Wolrd")
-print("Hello Wolrd")
+print("Hel
 pri
 pri
 pri
 pri
 prisdfss
 priㄴㅇㄹㄴ
-pri
+prisf
